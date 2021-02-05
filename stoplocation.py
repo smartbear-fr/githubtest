@@ -19,7 +19,7 @@ def get_centermost_point(cluster):
     """
     centroid = (MultiPoint(cluster).centroid.x, MultiPoint(cluster).centroid.y)
     centermost_point = min(cluster, key=lambda point: great_circle(point, centroid).meters)
-    return tuple(centermost_point)
+    return tuple(centermost_point
 
 def get_neighbors(df,index_center, spatial_eps, temporal_eps):
     """
